@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Massage Therapy Clinic - Professional Massage Services</title>
+    <meta name="description" content="Professional massage therapy services in Portland, OR. Book Swedish, deep tissue, hot stone, prenatal, sports, and aromatherapy massages in our tranquil clinic.">
+    <meta property="og:title" content="Serenity Massage Therapy Clinic - Professional Massage Services">
+    <meta property="og:description" content="Experience professional massage therapy in a peaceful environment. Licensed therapists, personalized care, and comprehensive wellness services.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        :root {
+            --sage: hsl(120, 25%, 64%);
+            --teal: hsl(195, 39%, 46%);
+            --beige: hsl(60, 56%, 91%);
+            --lavender: hsl(240, 67%, 94%);
+            --charcoal: hsl(180, 25%, 25%);
+            --gold: hsl(43, 74%, 49%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--charcoal);
+        }
+
+        .logo-icon {
+            color: var(--sage);
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--sage);
+            font-weight: 500;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(79, 79, 79, 0.4), rgba(79, 79, 79, 0.4)), 
+                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080') center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--sage);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: hsl(120, 25%, 54%);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--charcoal);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.125rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--sage);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-image {
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            color: #555;
+        }
+
+        .check-icon {
+            color: var(--sage);
+            margin-right: 0.75rem;
+        }
+
+        /* Booking Form */
+        .booking-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.375rem;
+            font-family: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 3px rgba(120, 175, 110, 0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--sage);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #ccc;
+            font-size: 1.25rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--sage);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Hidden class for JavaScript */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Active page styles */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Package deals */
+        .packages {
+            background: var(--lavender);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-top: 4rem;
+        }
+
+        .packages h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .package-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .package-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .package-card p {
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .package-price {
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* Contact info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-icon {
+            color: var(--sage);
+        }
+
+        /* Privacy Policy Styles */
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .privacy-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <i data-lucide="leaf" class="logo-icon"></i>
+                <span class="logo-text">Serenity Massage Therapy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">About Us</a></li>
+                <li><a href="#" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="#" onclick="showPage('booking')" class="nav-link">Book Appointment</a></li>
+                <li><a href="#" onclick="showPage('privacy')" class="nav-link">Privacy Policy</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Peace</h1>
+                <p>Professional massage therapy in a tranquil environment designed for your complete wellness and relaxation.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" onclick="showPage('booking')">Book Your Session</a>
+                    <a href="#" class="btn btn-outline" onclick="showPage('services')">View Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" style="background: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Serenity?</h2>
+                    <p>Experience professional massage therapy in a peaceful environment designed to promote healing and relaxation.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="user-check" class="feature-icon"></i>
+                        <h3>Licensed Professionals</h3>
+                        <p>Our certified massage therapists have extensive training and years of experience in therapeutic massage.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i data-lucide="waves" class="feature-icon" style="color: var(--teal);"></i>
+                        <h3>Tranquil Environment</h3>
+                        <p>Carefully designed spaces with calming music, aromatherapy, and comfortable amenities for your relaxation.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i data-lucide="heart" class="feature-icon"></i>
+                        <h3>Personalized Care</h3>
+                        <p>Every session is tailored to your specific needs, preferences, and therapeutic goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="section" style="background: var(--beige);">
+            <div class="container">
+                <div class="section-title">
+                    <h1>About Serenity Massage Therapy</h1>
+                    <p>Dedicated to your wellness journey since 2015</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Professional massage therapist">
+                    </div>
+                    <div class="about-content">
+                        <h2>Our Story</h2>
+                        <p>Founded by Sarah Johnson, LMT, Serenity Massage Therapy was born from a passion for helping people achieve optimal wellness through the healing power of therapeutic touch.</p>
+                        <p>With over 15 years of experience in massage therapy, Sarah recognized the need for a space where clients could truly disconnect from daily stress and focus on their physical and mental well-being.</p>
+                        <p>Our clinic combines traditional massage techniques with modern wellness practices to provide a comprehensive approach to health and relaxation.</p>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Our Mission</h2>
+                        <p>To provide exceptional massage therapy services in a peaceful, professional environment that promotes healing, relaxation, and overall wellness.</p>
+                        
+                        <ul class="check-list">
+                            <li><i data-lucide="check" class="check-icon"></i> Personalized treatment plans</li>
+                            <li><i data-lucide="check" class="check-icon"></i> State-of-the-art facilities</li>
+                            <li><i data-lucide="check" class="check-icon"></i> Continuing education and training</li>
+                            <li><i data-lucide="check" class="check-icon"></i> Commitment to client satisfaction</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Peaceful massage therapy room">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+        <section class="section" style="background: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Our Services</h1>
+                    <p>Choose from our comprehensive range of massage therapy services, each designed to address specific wellness needs.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Swedish Massage">
+                        <div class="service-card-content">
+                            <h3>Swedish Massage</h3>
+                            <p>Classic relaxation massage using long, flowing strokes to promote circulation and reduce muscle tension.</p>
+                            <div class="service-price">60min - $85 | 90min - $125</div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Deep Tissue Massage">
+                        <div class="service-card-content">
+                            <h3>Deep Tissue Massage</h3>
+                            <p>Therapeutic massage targeting deeper muscle layers to address chronic tension and pain.</p>
+                            <div class="service-price">60min - $95 | 90min - $140</div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Hot Stone Massage">
+                        <div class="service-card-content">
+                            <h3>Hot Stone Massage</h3>
+                            <p>Deeply relaxing massage using heated stones to warm muscles and enhance therapeutic benefits.</p>
+                            <div class="service-price">90min - $155</div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Prenatal Massage">
+                        <div class="service-card-content">
+                            <h3>Prenatal Massage</h3>
+                            <p>Specialized massage for expecting mothers to reduce discomfort and promote relaxation during pregnancy.</p>
+                            <div class="service-price">60min - $90 | 90min - $130</div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Sports Massage">
+                        <div class="service-card-content">
+                            <h3>Sports Massage</h3>
+                            <p>Performance-focused massage for athletes to prevent injury and enhance recovery.</p>
+                            <div class="service-price">60min - $100 | 90min - $145</div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" alt="Aromatherapy Massage">
+                        <div class="service-card-content">
+                            <h3>Aromatherapy Massage</h3>
+                            <p>Relaxing massage enhanced with therapeutic essential oils for emotional and physical well-being.</p>
+                            <div class="service-price">60min - $95 | 90min - $135</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package Deals -->
+                <div class="packages">
+                    <h2>Package Deals</h2>
+                    <div class="packages-grid">
+                        <div class="package-card">
+                            <h3>Wellness Package</h3>
+                            <p>3 Swedish massages (60min each)</p>
+                            <div class="package-price">$240 (Save $15)</div>
+                        </div>
+                        <div class="package-card">
+                            <h3>Therapeutic Package</h3>
+                            <p>3 Deep tissue massages (60min each)</p>
+                            <div class="package-price">$270 (Save $15)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Booking Page -->
+    <div id="booking" class="page">
+        <section class="section" style="background: #f9f9f9;">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Book Your Appointment</h1>
+                    <p>Schedule your massage therapy session online. We'll confirm your appointment within 24 hours.</p>
+                </div>
+
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Select Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Choose a service...</option>
+                                <option value="swedish-60">Swedish Massage - 60min ($85)</option>
+                                <option value="swedish-90">Swedish Massage - 90min ($125)</option>
+                                <option value="deep-tissue-60">Deep Tissue Massage - 60min ($95)</option>
+                                <option value="deep-tissue-90">Deep Tissue Massage - 90min ($140)</option>
+                                <option value="hot-stone">Hot Stone Massage - 90min ($155)</option>
+                                <option value="prenatal-60">Prenatal Massage - 60min ($90)</option>
+                                <option value="prenatal-90">Prenatal Massage - 90min ($130)</option>
+                                <option value="sports-60">Sports Massage - 60min ($100)</option>
+                                <option value="sports-90">Sports Massage - 90min ($145)</option>
+                                <option value="aromatherapy-60">Aromatherapy Massage - 60min ($95)</option>
+                                <option value="aromatherapy-90">Aromatherapy Massage - 90min ($135)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time...</option>
+                                    <option value="9:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="1:00">1:00 PM</option>
+                                    <option value="2:00">2:00 PM</option>
+                                    <option value="3:00">3:00 PM</option>
+                                    <option value="4:00">4:00 PM</option>
+                                    <option value="5:00">5:00 PM</option>
+                                    <option value="6:00">6:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests or Health Concerns</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please let us know about any health conditions, injuries, or special requests..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="isFirstTime" name="isFirstTime">
+                                <label for="isFirstTime">This is my first visit to Serenity Massage Therapy</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="text-align: center;">
+                            <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem;">Book Appointment</button>
+                        </div>
+                    </form>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                (555) 123-4567
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                info@serenitymassage.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <div>
+                                <strong>Location</strong><br>
+                                123 Wellness Way<br>Portland, OR 97205
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Privacy Page -->
+    <div id="privacy" class="page">
+        <section class="section" style="background: white;">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Privacy Policy</h1>
+                    <p>Your privacy and confidentiality are important to us</p>
+                </div>
+
+                <div class="privacy-content">
+                    <h2>Information We Collect</h2>
+                    <p>We collect information you provide directly to us, such as when you schedule an appointment, create an account, or contact us. This may include:</p>
+                    <ul>
+                        <li>Personal identification information (name, email address, phone number)</li>
+                        <li>Health information relevant to your massage therapy treatment</li>
+                        <li>Appointment preferences and scheduling information</li>
+                        <li>Payment information for processing transactions</li>
+                    </ul>
+
+                    <h2>How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide, maintain, and improve our massage therapy services</li>
+                        <li>Schedule and manage your appointments</li>
+                        <li>Communicate with you about your appointments and our services</li>
+                        <li>Process payments and maintain billing records</li>
+                        <li>Comply with legal and regulatory requirements</li>
+                    </ul>
+
+                    <h2>Information Sharing</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties except as described in this privacy policy. We may share your information:</p>
+                    <ul>
+                        <li>With healthcare providers when necessary for your treatment</li>
+                        <li>With service providers who assist us in operating our business</li>
+                        <li>When required by law or to protect our rights and safety</li>
+                        <li>With your explicit consent</li>
+                    </ul>
+
+                    <h2>Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+
+                    <h2>Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access and review your personal information</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Request deletion of your personal information</li>
+                        <li>Opt out of certain communications</li>
+                        <li>File a complaint with supervisory authorities</li>
+                    </ul>
+
+                    <h2>HIPAA Compliance</h2>
+                    <p>As a healthcare provider, we comply with the Health Insurance Portability and Accountability Act (HIPAA). Your health information is protected and will only be used and disclosed as permitted by law and with your authorization.</p>
+
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+                    <div class="contact-box">
+                        <p>Email: privacy@serenitymassage.com</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Address: 123 Wellness Way, Portland, OR 97205</p>
+                    </div>
+
+                    <p style="font-size: 0.9em; color: #666; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                        Last updated: December 2024
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <i data-lucide="leaf" style="color: var(--sage);"></i>
+                        <span style="font-size: 1.25rem; font-weight: 600;">Serenity Massage Therapy</span>
+                    </div>
+                    <p style="color: #ccc; margin-bottom: 1rem;">
+                        Professional massage therapy services in a tranquil environment designed for your wellness.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('services')">Swedish Massage</a></li>
+                        <li><a href="#" onclick="showPage('services')">Deep Tissue Massage</a></li>
+                        <li><a href="#" onclick="showPage('services')">Hot Stone Massage</a></li>
+                        <li><a href="#" onclick="showPage('services')">Prenatal Massage</a></li>
+                        <li><a href="#" onclick="showPage('services')">Sports Massage</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('services')">Services</a></li>
+                        <li><a href="#" onclick="showPage('booking')">Book Appointment</a></li>
+                        <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div style="color: #ccc;">
+                        <div style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                            <i data-lucide="map-pin" style="margin-right: 0.75rem; margin-top: 0.125rem; flex-shrink: 0;"></i>
+                            <span>123 Wellness Way<br>Portland, OR 97205</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <i data-lucide="phone" style="margin-right: 0.75rem;"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i data-lucide="mail" style="margin-right: 0.75rem;"></i>
+                            <span>info@serenitymassage.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Serenity Massage Therapy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set minimum date to today for booking form
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.min = today;
+            }
+        });
+
+        // Page navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Find and activate the corresponding nav link
+            const activeLink = document.querySelector(`[onclick="showPage('${pageId}')"]`);
+            if (activeLink && activeLink.classList.contains('nav-link')) {
+                activeLink.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.firstName || !data.lastName || !data.email || !data.phone || !data.service || !data.date || !data.time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Thank you! Your appointment request has been submitted. We\'ll contact you within 24 hours to confirm your appointment.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
