@@ -587,16 +587,22 @@
     <!-- Home Page -->
     <div id="home" class="page active">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Find Your Peace</h1>
-                <p>Professional massage therapy in a tranquil environment designed for your complete wellness and relaxation.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary" onclick="showPage('booking')">Book Your Session</a>
-                    <a href="#" class="btn btn-outline" onclick="showPage('services')">View Services</a>
-                </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Peace</h1>
+            <p>Professional massage therapy in a tranquil environment designed for your complete wellness and relaxation.</p>
+            <div class="hero-buttons">
+                <!-- Acuity Booking Button -->
+                <a href="https://app.acuityscheduling.com/schedule.php?owner=36238480&ref=booking_button" 
+                   target="_blank" 
+                   class="acuity-embed-button" 
+                   style="background: #5fb8b9; color: #fff; padding: 8px 12px; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 4px; text-decoration: none; display: inline-block;">
+                   Schedule Appointment
+                </a>
+                <a href="#" class="btn btn-outline" onclick="showPage('services')">View Services</a>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Features Section -->
         <section class="section" style="background: white;">
@@ -1073,5 +1079,12 @@
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
     </script>
+    ...
+<!-- Your other HTML content -->
+<link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/36238480.css" id="acuity-button-styles" />
+<script src="https://embed.acuityscheduling.com/embed/button/36238480.js" async></script>
+</body>
+</html>
+
 </body>
 </html>
